@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --color-gold: #c8a45d;
+  --color-green: #3f6b4e;
+  --color-beige: #f6f1e7;
+  --color-cream: #fbf8f1;
+  --color-ink: #1f2a24;
+}
+
+html, body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+/* Reusable utility classes */
+@layer components {
+  .wrap {
+    @apply max-w-wrap mx-auto px-5 sm:px-8;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-full text-sm font-medium tracking-wide transition-all duration-300;
+  }
+
+  .btn-primary {
+    @apply btn bg-brand-gold text-white hover:bg-brand-goldDark shadow-sm;
+  }
+
+  .btn-outline {
+    @apply btn border border-white/70 text-white hover:bg-white hover:text-brand-ink;
+  }
+
+  .btn-dark {
+    @apply btn bg-brand-ink text-white hover:bg-brand-greenDark;
+  }
+
+  .btn-ghost {
+    @apply btn border border-brand-ink/20 text-brand-ink hover:bg-brand-ink hover:text-white;
+  }
+
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  .eyebrow {
+    @apply text-xs uppercase tracking-[0.25em] text-brand-gold font-medium;
+  }
+
+  .h-display {
+    @apply font-serif text-4xl md:text-5xl lg:text-6xl leading-tight text-brand-ink;
+  }
+
+  .h-section {
+    @apply font-serif text-3xl md:text-4xl leading-tight text-brand-ink;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-brand-ink mb-1;
+  }
+
+  .input {
+    @apply w-full rounded-lg border border-brand-ink/15 bg-white px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold/40 focus:border-brand-gold;
+  }
+}
+
+/* Fade-in animation */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp 0.7s ease-out both; }

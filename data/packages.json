@@ -1,0 +1,418 @@
+[
+  {
+    "id": "essential-bhutan",
+    "title": "Essential Bhutan",
+    "slug": "essential-bhutan",
+    "duration": "7 days / 6 nights",
+    "price": "From $2,450 per person",
+    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1400&q=80",
+    "shortDescription": "A perfect introduction to Bhutan — Paro, Thimphu and Punakha, including the hike to Tiger's Nest.",
+    "destinations": [
+      "Paro",
+      "Thimphu",
+      "Punakha"
+    ],
+    "type": "Cultural Tours",
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Arrival in Paro",
+        "text": "Fly into Paro, transfer to your hotel and an easy afternoon walk through town."
+      },
+      {
+        "day": "Day 2",
+        "title": "Paro – Thimphu",
+        "text": "Visit Rinpung Dzong and the National Museum before driving to Thimphu."
+      },
+      {
+        "day": "Day 3",
+        "title": "Thimphu sightseeing",
+        "text": "Buddha Dordenma, Memorial Chorten, weekend market and Tashichho Dzong."
+      },
+      {
+        "day": "Day 4",
+        "title": "Thimphu – Punakha",
+        "text": "Cross Dochula pass (3,100m) and descend into the warm Punakha valley."
+      },
+      {
+        "day": "Day 5",
+        "title": "Punakha exploration",
+        "text": "Punakha Dzong, suspension bridge, and the short walk to Chimi Lhakhang."
+      },
+      {
+        "day": "Day 6",
+        "title": "Return to Paro – Tiger's Nest",
+        "text": "Drive back to Paro and hike up to Taktsang Monastery."
+      },
+      {
+        "day": "Day 7",
+        "title": "Departure",
+        "text": "Morning transfer to Paro airport."
+      }
+    ],
+    "inclusions": [
+      "All accommodation (4★ or boutique)",
+      "All meals — breakfast, lunch, dinner",
+      "Licensed English-speaking guide",
+      "Private vehicle and driver",
+      "All entrance fees and permits",
+      "Sustainable Development Fee (SDF)"
+    ],
+    "exclusions": [
+      "International flights",
+      "Visa fee",
+      "Travel insurance",
+      "Personal expenses, tips and beverages"
+    ]
+  },
+  {
+    "id": "central-bhutan-discovery",
+    "title": "Central Bhutan Discovery",
+    "slug": "central-bhutan-discovery",
+    "duration": "10 days / 9 nights",
+    "price": "From $3,650 per person",
+    "image": "/uploads/1780032214507-whatsapp-image-2025-10-27-at-1.41.13-pm.jpeg",
+    "shortDescription": "Travel deeper — Paro, Thimphu, Punakha, Phobjikha, Trongsa and the sacred valleys of Bumthang.",
+    "destinations": [
+      "Paro",
+      "Thimphu",
+      "Punakha",
+      "Phobjikha Valley",
+      "Trongsa",
+      "Bumthang"
+    ],
+    "type": "Cultural Tours",
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Arrive Paro",
+        "text": "Welcome to Bhutan; light walking afternoon."
+      },
+      {
+        "day": "Day 2",
+        "title": "Paro – Thimphu",
+        "text": "Cultural sites en route and city introduction."
+      },
+      {
+        "day": "Day 3",
+        "title": "Thimphu – Punakha",
+        "text": "Cross Dochula pass to the warm Punakha valley."
+      },
+      {
+        "day": "Day 4",
+        "title": "Punakha – Phobjikha",
+        "text": "Drive to the glacial valley of the cranes."
+      },
+      {
+        "day": "Day 5",
+        "title": "Phobjikha to Trongsa",
+        "text": "Nature walk in Phobjikha; afternoon drive to Trongsa."
+      },
+      {
+        "day": "Day 6",
+        "title": "Trongsa – Bumthang",
+        "text": "Visit Trongsa Dzong and continue into Bumthang."
+      },
+      {
+        "day": "Day 7",
+        "title": "Bumthang valleys",
+        "text": "Jambay, Kurjey, Jakar Dzong, Burning Lake."
+      },
+      {
+        "day": "Day 8",
+        "title": "Bumthang – Punakha",
+        "text": "Long, beautiful drive back west."
+      },
+      {
+        "day": "Day 9",
+        "title": "Punakha – Paro & Tiger's Nest",
+        "text": "Hike Taktsang in the afternoon."
+      },
+      {
+        "day": "Day 10",
+        "title": "Departure",
+        "text": "Transfer to Paro airport."
+      }
+    ],
+    "inclusions": [
+      "All accommodation (4★ or boutique)",
+      "All meals",
+      "Licensed guide and private vehicle",
+      "All entrance fees, permits and SDF",
+      "Domestic flight Bumthang–Paro (subject to schedule)"
+    ],
+    "exclusions": [
+      "International flights",
+      "Visa fee",
+      "Travel insurance",
+      "Personal expenses and tips"
+    ]
+  },
+  {
+    "id": "tigers-nest-trek",
+    "title": "Tiger's Nest & Druk Path Trek",
+    "slug": "tigers-nest-druk-path-trek",
+    "duration": "9 days / 8 nights",
+    "price": "From $3,200 per person",
+    "image": "https://images.unsplash.com/photo-1593332029823-9ad9906276b3?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "shortDescription": "Cross high passes and alpine lakes on the classic Druk Path, then finish with the climb to Tiger's Nest.",
+    "destinations": [
+      "Paro",
+      "Thimphu"
+    ],
+    "type": "Adventure Tours",
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Arrive Paro",
+        "text": "Acclimatise and prepare for the trek."
+      },
+      {
+        "day": "Day 2",
+        "title": "Paro sightseeing",
+        "text": "Easy walking and gear check."
+      },
+      {
+        "day": "Day 3",
+        "title": "Start Druk Path",
+        "text": "Trek to Jele Dzong (3,480m)."
+      },
+      {
+        "day": "Day 4",
+        "title": "Jele to Jangchulakha",
+        "text": "Through rhododendron and yak pastures."
+      },
+      {
+        "day": "Day 5",
+        "title": "Jangchulakha to Jimilangtsho",
+        "text": "Alpine lake camp at 3,870m."
+      },
+      {
+        "day": "Day 6",
+        "title": "To Phajoding",
+        "text": "Cross Labana La and descend toward Thimphu."
+      },
+      {
+        "day": "Day 7",
+        "title": "Trek out to Thimphu",
+        "text": "Final descent and hotel night in Thimphu."
+      },
+      {
+        "day": "Day 8",
+        "title": "Drive to Paro & Tiger's Nest",
+        "text": "Climb to Taktsang in the morning."
+      },
+      {
+        "day": "Day 9",
+        "title": "Departure",
+        "text": "Transfer to airport."
+      }
+    ],
+    "inclusions": [
+      "All trek camping and crew (cook, helpers, ponies)",
+      "Hotels in Paro and Thimphu",
+      "All meals",
+      "Licensed guide and trek leader",
+      "All permits and SDF"
+    ],
+    "exclusions": [
+      "International flights",
+      "Visa fee",
+      "Travel insurance",
+      "Personal trekking gear"
+    ]
+  },
+  {
+    "id": "paro-tshechu-festival",
+    "title": "Paro Tshechu Festival Journey",
+    "slug": "paro-tshechu-festival",
+    "duration": "8 days / 7 nights",
+    "price": "From $2,950 per person",
+    "image": "https://yumlanirvanatravel.com/wp-content/uploads/2022/05/Thimphu-Tshechu-Festival.jpg",
+    "shortDescription": "Time your visit with Paro's spring festival — masked dances, courtyards full of colour, and the sacred thongdrel at dawn.",
+    "destinations": [
+      "Paro",
+      "Thimphu",
+      "Punakha"
+    ],
+    "type": "Festival Tours",
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Arrive Paro",
+        "text": "Settle in for the festival days."
+      },
+      {
+        "day": "Day 2",
+        "title": "Paro Tshechu Day 1",
+        "text": "Watch the masked dances at Rinpung Dzong."
+      },
+      {
+        "day": "Day 3",
+        "title": "Paro Tshechu Day 2",
+        "text": "Dawn unveiling of the giant thongdrel."
+      },
+      {
+        "day": "Day 4",
+        "title": "Paro – Thimphu",
+        "text": "Drive to the capital."
+      },
+      {
+        "day": "Day 5",
+        "title": "Thimphu – Punakha",
+        "text": "Over Dochula pass to Punakha."
+      },
+      {
+        "day": "Day 6",
+        "title": "Punakha",
+        "text": "Dzong and surrounding villages."
+      },
+      {
+        "day": "Day 7",
+        "title": "Return to Paro – Tiger's Nest",
+        "text": "Hike up to Taktsang."
+      },
+      {
+        "day": "Day 8",
+        "title": "Departure",
+        "text": "Transfer to airport."
+      }
+    ],
+    "inclusions": [
+      "All accommodation, meals, guide and transport",
+      "Festival entrance fees, permits and SDF"
+    ],
+    "exclusions": [
+      "International flights",
+      "Visa fee",
+      "Travel insurance",
+      "Personal expenses"
+    ]
+  },
+  {
+    "id": "wellness-retreat",
+    "title": "Bhutan Wellness Retreat",
+    "slug": "bhutan-wellness-retreat",
+    "duration": "6 days / 5 nights",
+    "price": "From $4,250 per person",
+    "image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1400&q=80",
+    "shortDescription": "Slow days, hot-stone baths, gentle hikes and traditional medicine — designed for deep rest.",
+    "destinations": [
+      "Paro",
+      "Punakha"
+    ],
+    "type": "Wellness Tours",
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Arrive Paro",
+        "text": "Welcome and herbal tea."
+      },
+      {
+        "day": "Day 2",
+        "title": "Paro day",
+        "text": "Morning yoga, gentle walk, hot-stone bath in the evening."
+      },
+      {
+        "day": "Day 3",
+        "title": "Drive to Punakha",
+        "text": "Through Dochula pass."
+      },
+      {
+        "day": "Day 4",
+        "title": "Punakha wellness day",
+        "text": "Meditation with a monk, river-side spa session."
+      },
+      {
+        "day": "Day 5",
+        "title": "Return to Paro & Tiger's Nest",
+        "text": "Slow ascent to Taktsang."
+      },
+      {
+        "day": "Day 6",
+        "title": "Departure",
+        "text": "Transfer to airport."
+      }
+    ],
+    "inclusions": [
+      "Premium accommodation",
+      "All meals (curated wellness menu)",
+      "Daily yoga and one spa treatment per day",
+      "Licensed guide and private transport",
+      "All permits and SDF"
+    ],
+    "exclusions": [
+      "International flights",
+      "Visa fee",
+      "Travel insurance",
+      "Additional spa treatments"
+    ]
+  },
+  {
+    "id": "luxury-grand-bhutan",
+    "title": "Luxury Grand Bhutan",
+    "slug": "luxury-grand-bhutan",
+    "duration": "12 days / 11 nights",
+    "price": "From $9,800 per person",
+    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1400&q=80",
+    "shortDescription": "Stay at Bhutan's finest lodges across five valleys — designed for travellers who want nothing left to chance.",
+    "destinations": [
+      "Paro",
+      "Thimphu",
+      "Punakha",
+      "Phobjikha Valley",
+      "Bumthang"
+    ],
+    "type": "Luxury Tours",
+    "itinerary": [
+      {
+        "day": "Day 1-2",
+        "title": "Paro",
+        "text": "Lodge stay, private guide, gentle valley walks."
+      },
+      {
+        "day": "Day 3-4",
+        "title": "Thimphu",
+        "text": "Private dzong visits and cultural experiences."
+      },
+      {
+        "day": "Day 5-6",
+        "title": "Punakha",
+        "text": "Riverside lodge, private dinner in a farmhouse."
+      },
+      {
+        "day": "Day 7-8",
+        "title": "Phobjikha Valley",
+        "text": "Crane watching and high meadow walks."
+      },
+      {
+        "day": "Day 9-10",
+        "title": "Bumthang",
+        "text": "Sacred valleys and private monastery access."
+      },
+      {
+        "day": "Day 11",
+        "title": "Return to Paro & Tiger's Nest",
+        "text": "Private hike to Taktsang with a monk."
+      },
+      {
+        "day": "Day 12",
+        "title": "Departure",
+        "text": "Transfer to airport."
+      }
+    ],
+    "inclusions": [
+      "5★ lodges throughout",
+      "Private guide and driver",
+      "All meals including private dining experiences",
+      "Helicopter or domestic flights where possible",
+      "All permits and SDF"
+    ],
+    "exclusions": [
+      "International flights",
+      "Visa fee",
+      "Travel insurance",
+      "Premium spirits"
+    ]
+  }
+]

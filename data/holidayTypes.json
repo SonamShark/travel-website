@@ -1,0 +1,44 @@
+[
+  {
+    "id": "cultural",
+    "name": "Cultural Tours",
+    "slug": "cultural-tours",
+    "image": "https://images.unsplash.com/photo-1729179380404-77b8b9317128?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "description": "Walk through Bhutan's living traditions — fortress monasteries (dzongs), red-robed monks at morning prayer, weavers and woodcarvers passing down centuries-old craft."
+  },
+  {
+    "id": "adventure",
+    "name": "Adventure Tours",
+    "slug": "adventure-tours",
+    "image": "https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=1400&q=80",
+    "description": "Trek the high Himalaya, cycle the East-West highway, raft glacial rivers, or hike to remote mountain monasteries you'll have entirely to yourself."
+  },
+  {
+    "id": "spiritual",
+    "name": "Spiritual Tours",
+    "slug": "spiritual-tours",
+    "image": "https://images.unsplash.com/photo-1545239351-cefa43af60f3?auto=format&fit=crop&w=1400&q=80",
+    "description": "Meditation with resident monks, butter-lamp offerings at sacred sites, and quiet days in monasteries where the prayer wheels never stop turning."
+  },
+  {
+    "id": "festival",
+    "name": "Festival Tours",
+    "slug": "festival-tours",
+    "image": "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1400&q=80",
+    "description": "Time your journey with Paro Tshechu, Thimphu Tshechu, or the smaller village festivals — masked dances, courtyard crowds, and centuries of pageantry."
+  },
+  {
+    "id": "wellness",
+    "name": "Wellness Tours",
+    "slug": "wellness-tours",
+    "image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1400&q=80",
+    "description": "Hot-stone baths, traditional medicine, yoga at altitude, and slow days designed to reset body and mind in the mountain air."
+  },
+  {
+    "id": "luxury",
+    "name": "Luxury Tours",
+    "slug": "luxury-tours",
+    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1400&q=80",
+    "description": "Stay at the finest lodges across the kingdom — private guides, helicopter transfers, candle-lit dinners in dzong courtyards, and access reserved for very few."
+  }
+]

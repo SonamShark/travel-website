@@ -1,0 +1,122 @@
+[
+  {
+    "id": "thimphu",
+    "name": "Thimphu",
+    "slug": "thimphu",
+    "image": "https://images.unsplash.com/photo-1733517766086-5bb8f2ffd2f8?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "shortDescription": "Bhutan's relaxed capital — where mountain air meets monasteries, weekend markets, and the soft hum of prayer wheels.",
+    "highlights": [
+      "Tashichho Dzong",
+      "Buddha Dordenma",
+      "Weekend Market",
+      "Memorial Chorten"
+    ],
+    "bestTime": "March – May, September – November",
+    "longDescription": "Tucked between forested ridges and crowned by the great Buddha Dordenma, Thimphu is a capital like no other — without a single traffic light, with weekend archery on the lawns and lamps glowing in dzong windows at dusk."
+  },
+  {
+    "id": "paro",
+    "name": "Paro",
+    "slug": "paro",
+    "image": "https://images.unsplash.com/photo-1729180253317-93ba9cf4ceb4?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "shortDescription": "Bhutan's gateway valley — home to the iconic Tiger's Nest and a patchwork of red-roofed farmhouses.",
+    "highlights": [
+      "Tiger's Nest (Taktsang)",
+      "Rinpung Dzong",
+      "Kyichu Lhakhang",
+      "National Museum"
+    ],
+    "bestTime": "March – May, September – November",
+    "longDescription": "Paro is where most Bhutan journeys begin — a wide green valley framed by snow-tipped peaks, with the cliff-top monastery of Taktsang watching over it all."
+  },
+  {
+    "id": "punakha",
+    "name": "Punakha",
+    "slug": "punakha",
+    "image": "https://images.unsplash.com/photo-1585978231472-76a64f52fd7a?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "shortDescription": "Warm sub-tropical valley with terraced rice fields and Bhutan's most beautiful dzong at the river's confluence.",
+    "highlights": [
+      "Punakha Dzong",
+      "Suspension Bridge",
+      "Chimi Lhakhang",
+      "Rice paddies"
+    ],
+    "bestTime": "October – April",
+    "longDescription": "Set lower and warmer than Thimphu, Punakha is a valley of rivers and rice — and the riverside dzong here, all whitewashed walls and golden roofs, is often called Bhutan's most beautiful building."
+  },
+  {
+    "id": "bumthang",
+    "name": "Bumthang",
+    "slug": "bumthang",
+    "image": "https://images.unsplash.com/photo-1620802881249-8a2f4b4d8ee5?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "shortDescription": "The spiritual heartland — four sacred valleys dotted with some of Bhutan's oldest temples.",
+    "highlights": [
+      "Jakar Dzong",
+      "Jambay Lhakhang",
+      "Kurjey Lhakhang",
+      "Burning Lake"
+    ],
+    "bestTime": "April – June, September – October",
+    "longDescription": "Bumthang's four valleys feel quieter, older, more sacred — buckwheat fields, ancient temples, and apple orchards woven together at 2,600 metres."
+  },
+  {
+    "id": "phobjikha",
+    "name": "Phobjikha Valley",
+    "slug": "phobjikha-valley",
+    "image": "https://littlebhutan.com/wp-content/uploads/2023/08/Phobjikha-Valley.jpg",
+    "shortDescription": "A wide glacial valley that hosts the black-necked cranes each winter — wild, open, and deeply peaceful.",
+    "highlights": [
+      "Black-necked cranes",
+      "Gangtey Monastery",
+      "Nature trail",
+      "Yak herders"
+    ],
+    "bestTime": "October – February (cranes)",
+    "longDescription": "Phobjikha is one of Bhutan's few open glacial valleys — a U-shaped sweep of pasture and wetland where black-necked cranes spend the winter, watched over by Gangtey Monastery on its low ridge."
+  },
+  {
+    "id": "haa",
+    "name": "Haa",
+    "slug": "haa",
+    "image": "https://i0.wp.com/footlooseinme.com/wp-content/uploads/2018/05/inside-the-haa-dzong.jpg?resize=1060%2C795&ssl=1",
+    "shortDescription": "Bhutan's hidden western valley — only recently opened to visitors, still wonderfully untouched.",
+    "highlights": [
+      "Lhakhang Karpo & Nagpo",
+      "Chele La pass",
+      "Haa Summer Festival",
+      "Pine forests"
+    ],
+    "bestTime": "May – September",
+    "longDescription": "Reached over the high Chele La pass, Haa is small, green, and quiet — a valley where you can still hear the wind in the pines and watch yaks crossing the road."
+  },
+  {
+    "id": "trongsa",
+    "name": "Trongsa",
+    "slug": "trongsa",
+    "image": "/uploads/1780031240723-whatsapp-image-2025-10-27-at-3.11.40-pm-1-.jpeg",
+    "shortDescription": "The ancestral seat of Bhutan's royal family, perched dramatically above a gorge in central Bhutan.",
+    "highlights": [
+      "Trongsa Dzong",
+      "Ta Dzong Museum",
+      "Mountain views",
+      "Mangde river gorge"
+    ],
+    "bestTime": "March – May, September – November",
+    "longDescription": "Trongsa Dzong cascades down a ridge in long whitewashed lines — historically the gateway between western and eastern Bhutan, and the seat from which the country's first kings ruled."
+  },
+  {
+    "id": "wangdue",
+    "name": "Wangdue",
+    "slug": "wangdue",
+    "image": "https://images.unsplash.com/photo-1729176989204-50b08aa8d2f6?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "shortDescription": "A river-side town and gateway to central Bhutan, surrounded by rice terraces and forested hills.",
+    "highlights": [
+      "Wangdue Phodrang Dzong",
+      "Rinchengang village",
+      "Punatsangchhu river",
+      "Local markets"
+    ],
+    "bestTime": "October – April",
+    "longDescription": "Wangdue sits on a long ridge above the Punatsangchhu river — its dzong recently rebuilt after fire, its villages still living closely with the land."
+  }
+]
