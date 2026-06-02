@@ -138,8 +138,8 @@
       "All accommodation (4★ or boutique)",
       "All meals",
       "Licensed guide and private vehicle",
-      "All entrance fees, permits and SDF",
-      "Domestic flight Bumthang–Paro (subject to schedule)"
+      "All entrance fees, permits and SDF"
+      //"Domestic flight Bumthang–Paro (subject to schedule)"
     ],
     "exclusions": [
       "International flights",
@@ -153,7 +153,7 @@
     "title": "Tiger's Nest & Druk Path Trek",
     "slug": "tigers-nest-druk-path-trek",
     "duration": "9 days / 8 nights",
-    "price": "From $3,200 per person",
+    "price": "From $4,050 per person",
     "image": "https://images.unsplash.com/photo-1593332029823-9ad9906276b3?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "shortDescription": "Cross high passes and alpine lakes on the classic Druk Path, then finish with the climb to Tiger's Nest.",
     "destinations": [
@@ -353,7 +353,7 @@
     "title": "Luxury Grand Bhutan",
     "slug": "luxury-grand-bhutan",
     "duration": "12 days / 11 nights",
-    "price": "From $9,800 per person",
+    "price": "From $3,600 per person",
     "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1400&q=80",
     "shortDescription": "Stay at Bhutan's finest lodges across five valleys — designed for travellers who want nothing left to chance.",
     "destinations": [
@@ -402,13 +402,13 @@
       }
     ],
     "inclusions": [
-      "5★ lodges throughout",
       "Private guide and driver",
       "All meals including private dining experiences",
       "Helicopter or domestic flights where possible",
       "All permits and SDF"
     ],
     "exclusions": [
+      "5★ lodges throughout",
       "International flights",
       "Visa fee",
       "Travel insurance",
