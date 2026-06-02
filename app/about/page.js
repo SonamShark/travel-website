@@ -28,7 +28,7 @@ export default function AboutPage() {
       <main>
         <PageHeader
           eyebrow="About us"
-          title="Thubten Tour and Travel"
+          title="Thubten Travels"
           subtitle="A small, Bhutanese-owned travel company. We design unhurried journeys for travellers who want to see Bhutan as it actually is."
           //image="https://images.unsplash.com/photo-1582554455769-2c0a6f0b1f9d?auto=format&fit=crop&w=1920&q=80"
           image="https://images.unsplash.com/photo-1629778634400-21720d1b92b3?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
