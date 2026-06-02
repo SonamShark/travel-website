@@ -13,7 +13,7 @@ export default function Footer() {
             <span className="w-9 h-9 rounded-full bg-brand-green flex items-center justify-center">
               <span className="font-serif text-brand-gold text-lg">T</span>
             </span>
-            <span className="font-serif text-xl text-white">Thubten Tour and Travel</span>
+            <span className="font-serif text-xl text-white">Thubten Travels</span>
           </div>
           <p className="text-sm leading-relaxed">
             Tailor-made Bhutan holidays — designed slowly, guided locally,
@@ -58,7 +58,7 @@ export default function Footer() {
       </div>
       <div className="border-t border-white/10">
         <div className="wrap py-5 flex flex-col md:flex-row md:items-center md:justify-between gap-2 text-xs text-white/50">
-          <p>© {new Date().getFullYear()} Thubten Tour and Travel. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Thubten Travels. All rights reserved.</p>
           <p>
             <Link href="/admin" className="hover:text-brand-gold">Admin</Link>
           </p>

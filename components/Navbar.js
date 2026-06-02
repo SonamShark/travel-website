@@ -45,7 +45,7 @@ export default function Navbar({ transparent = false }) {
               solid ? "text-brand-ink" : "text-white"
             }`}
           >
-            Thubten Tour and Travel
+            Thubten Travels
           </span>
         </Link>
 
