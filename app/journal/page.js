@@ -4,7 +4,7 @@ import PageHeader from "@/components/PageHeader";
 import BlogCard from "@/components/BlogCard";
 import { readCollection } from "@/lib/db";
 
-export const metadata = { title: "Journal — Thubten Tour and Travel" };
+export const metadata = { title: "Journal — Thubten Travels" };
 
 export default function JournalPage() {
   const posts = readCollection("blogs");

@@ -3,7 +3,7 @@ import "./globals.css";
 export const metadata = {
   title: "Thubten Travels — Bhutan tailor-made holidays",
   description:
-    "Tailor-made Bhutan holidays — cultural, spiritual, adventure, festival, wellness and luxury journeys with Thubten Tour and Travel.",
+    "Tailor-made Bhutan holidays — cultural, spiritual, adventure, festival, wellness and luxury journeys with Thubten Travels.",
   icons: {
     icon: "/favicon.svg"
   }

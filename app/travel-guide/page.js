@@ -39,7 +39,7 @@ const festivals = [
   { name: "Haa Summer Festival", when: "July", where: "Haa Valley" }
 ];
 
-export const metadata = { title: "Travel Guide — Thubten Tour and Travel" };
+export const metadata = { title: "Travel Guide — Thubten Travels" };
 
 export default function TravelGuidePage() {
   return (

@@ -5,7 +5,7 @@ import DestinationCard from "@/components/DestinationCard";
 import CtaBanner from "@/components/CtaBanner";
 import { readCollection } from "@/lib/db";
 
-export const metadata = { title: "Destinations — Thubten Tour and Travel" };
+export const metadata = { title: "Destinations — Thubten Travels" };
 
 export default function DestinationsPage() {
   const destinations = readCollection("destinations");

@@ -36,7 +36,7 @@ export default function AdminLoginPage() {
             <span className="font-serif text-brand-gold text-xl">T</span>
           </div>
           <h1 className="mt-3 font-serif text-2xl text-brand-ink">Admin sign in</h1>
-          <p className="text-sm text-brand-ink/65 mt-1">Thubten Tour and Travel CMS</p>
+          <p className="text-sm text-brand-ink/65 mt-1">Thubten Travels CMS</p>
         </div>
 
         <form onSubmit={onSubmit} className="space-y-4">

@@ -4,7 +4,7 @@ import PageHeader from "@/components/PageHeader";
 import EnquiryForm from "@/components/EnquiryForm";
 import { readObject, readCollection } from "@/lib/db";
 
-export const metadata = { title: "Contact — Thubten Tour and Travel" };
+export const metadata = { title: "Contact — Thubten Travels" };
 
 export default function ContactPage() {
   const { contact = {} } = readObject("site");

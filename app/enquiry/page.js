@@ -4,7 +4,7 @@ import PageHeader from "@/components/PageHeader";
 import EnquiryForm from "@/components/EnquiryForm";
 import { readCollection } from "@/lib/db";
 
-export const metadata = { title: "Make an Enquiry — Thubten Tour and Travel" };
+export const metadata = { title: "Make an Enquiry — Thubten Travels" };
 
 export default function EnquiryPage() {
   const destinations = readCollection("destinations");

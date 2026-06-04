@@ -4,7 +4,7 @@ import PageHeader from "@/components/PageHeader";
 import CtaBanner from "@/components/CtaBanner";
 import { readObject } from "@/lib/db";
 
-export const metadata = { title: "About — Thubten Tour and Travel" };
+export const metadata = { title: "About — Thubten Travels" };
 
 const team = [
   { name: "Tashi Wangmo", role: "Founder & Head of Journeys" },
@@ -46,7 +46,7 @@ export default function AboutPage() {
               <p className="eyebrow mb-3">Our story</p>
               <h2 className="h-section">A travel company shaped by the country we live in</h2>
               <p className="mt-5 text-brand-ink/75 leading-relaxed">
-                Thubten Tour and Travel was founded in Thimphu by a small team of Bhutanese
+                Thubten Travels was founded in Thimphu by a small team of Bhutanese
                 guides and hospitality friends. After many years working for the larger operators,
                 we wanted to build something quieter — a company that takes the time to listen,
                 designs every journey carefully, and treats guests like people, not bookings.
@@ -85,7 +85,7 @@ export default function AboutPage() {
           <div className="wrap">
             <div className="max-w-2xl mb-10">
               <p className="eyebrow mb-3">Why us</p>
-              <h2 className="h-section">Why choose Thubten Tour and Travel</h2>
+              <h2 className="h-section">Why choose Thubten Travels</h2>
             </div>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               {whyChooseUs.map((item, idx) => (

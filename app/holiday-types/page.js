@@ -5,7 +5,7 @@ import HolidayTypeCard from "@/components/HolidayTypeCard";
 import CtaBanner from "@/components/CtaBanner";
 import { readCollection } from "@/lib/db";
 
-export const metadata = { title: "Holiday Types — Thubten Tour and Travel" };
+export const metadata = { title: "Holiday Types — Thubten Travels" };
 
 export default function HolidayTypesPage() {
   const types = readCollection("holidayTypes");

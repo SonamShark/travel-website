@@ -1,4 +1,4 @@
-# Thubten Tour and Travel
+# Thubten Travels
 
 A clean, modern Bhutan travel-agency website with a simple built-in CMS.
 
