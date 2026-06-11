@@ -2,9 +2,10 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import CtaBanner from "@/components/CtaBanner";
-import { readObject } from "@/lib/db";
+import { getSiteSettings } from "@/lib/site";
 
 export const metadata = { title: "About — Thubten Travels" };
+export const revalidate = 60;
 
 const team = [
   { name: "Tashi Wangmo", role: "Founder & Head of Journeys" },
@@ -19,8 +20,8 @@ const values = [
   { title: "Quietly considered", text: "Soft hellos, hot tea on arrival, the right book on your bedside table — the small things travellers remember." }
 ];
 
-export default function AboutPage() {
-  const { whyChooseUs = [] } = readObject("site");
+export default async function AboutPage() {
+  const { whyChooseUs = [] } = await getSiteSettings();
 
   return (
     <>

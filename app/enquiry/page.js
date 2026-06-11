@@ -2,13 +2,16 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import EnquiryForm from "@/components/EnquiryForm";
-import { readCollection } from "@/lib/db";
+import { getDestinations, getHolidayTypes } from "@/lib/content";
 
 export const metadata = { title: "Make an Enquiry — Thubten Travels" };
+export const revalidate = 60;
 
-export default function EnquiryPage() {
-  const destinations = readCollection("destinations");
-  const holidayTypes = readCollection("holidayTypes");
+export default async function EnquiryPage() {
+  const [destinations, holidayTypes] = await Promise.all([
+    getDestinations(),
+    getHolidayTypes()
+  ]);
   return (
     <>
       <Navbar />
@@ -22,7 +25,7 @@ export default function EnquiryPage() {
         <section className="section">
           <div className="wrap max-w-4xl">
             <div className="bg-white rounded-3xl shadow-sm p-6 md:p-10 border border-brand-ink/5">
-              <EnquiryForm destinations={destinations} holidayTypes={holidayTypes} />
+              <EnquiryForm destinations={destinations} holidayTypes={holidayTypes} source="enquiry" />
             </div>
           </div>
         </section>

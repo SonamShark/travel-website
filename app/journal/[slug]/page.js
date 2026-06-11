@@ -3,11 +3,9 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
-import { readCollection } from "@/lib/db";
+import { getBlogBySlug } from "@/lib/content";
 
-export function generateStaticParams() {
-  return readCollection("blogs").map((b) => ({ slug: b.slug }));
-}
+export const revalidate = 60;
 
 function formatDate(d) {
   if (!d) return "";
@@ -16,8 +14,8 @@ function formatDate(d) {
   return date.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
 }
 
-export default function BlogDetail({ params }) {
-  const post = readCollection("blogs").find((b) => b.slug === params.slug);
+export default async function BlogDetail({ params }) {
+  const post = await getBlogBySlug(params.slug);
   if (!post) notFound();
 
   return (

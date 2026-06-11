@@ -3,15 +3,12 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
-import { readCollection } from "@/lib/db";
+import { getDestinationBySlug } from "@/lib/content";
 
-export function generateStaticParams() {
-  return readCollection("destinations").map((d) => ({ slug: d.slug }));
-}
+export const revalidate = 60;
 
-export default function DestinationDetail({ params }) {
-  const destinations = readCollection("destinations");
-  const d = destinations.find((x) => x.slug === params.slug);
+export default async function DestinationDetail({ params }) {
+  const d = await getDestinationBySlug(params.slug);
   if (!d) notFound();
 
   return (

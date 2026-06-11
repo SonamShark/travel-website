@@ -9,10 +9,7 @@ out
 # OS
 .DS_Store
 
-# User uploads — keep the folder, not its contents
+# Old local-only files (legacy uploads + dev admin credentials)
 public/uploads/*
 !public/uploads/.gitkeep
-
-# Sensitive content not safe to publish
 data/admin.json
-data/enquiries.json

@@ -14,7 +14,7 @@ const initialState = {
   message: ""
 };
 
-export default function EnquiryForm({ destinations = [], holidayTypes = [], compact = false }) {
+export default function EnquiryForm({ destinations = [], holidayTypes = [], compact = false, source = "enquiry" }) {
   const [form, setForm] = useState(initialState);
   const [state, setState] = useState({ status: "idle", error: "" });
 
@@ -29,7 +29,7 @@ export default function EnquiryForm({ destinations = [], holidayTypes = [], comp
       const res = await fetch("/api/enquiries", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form)
+        body: JSON.stringify({ ...form, source })
       });
       if (!res.ok) throw new Error("Submission failed. Please try again.");
       setForm(initialState);

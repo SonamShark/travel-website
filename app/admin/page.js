@@ -1,29 +1,36 @@
 import Link from "next/link";
 import { requireAuth } from "@/lib/adminGuard";
 import AdminShell from "@/components/AdminShell";
-import { readCollection } from "@/lib/db";
+import { supabaseAdmin } from "@/lib/supabase/server";
 
 export const dynamic = "force-dynamic";
 
-export default function AdminDashboard() {
+async function count(table, filter) {
+  let q = supabaseAdmin.from(table).select("id", { count: "exact", head: true });
+  if (filter) q = filter(q);
+  const { count: n } = await q;
+  return n || 0;
+}
+
+export default async function AdminDashboard() {
   requireAuth();
 
-  const counts = {
-    destinations: readCollection("destinations").length,
-    packages: readCollection("packages").length,
-    holidayTypes: readCollection("holidayTypes").length,
-    blogs: readCollection("blogs").length,
-    enquiries: readCollection("enquiries").length
-  };
-
-  const newEnquiries = readCollection("enquiries").filter((e) => e.status === "new").length;
+  const [destinations, packages, holidayTypes, blogs, enquiries, newEnquiries] =
+    await Promise.all([
+      count("destinations"),
+      count("packages"),
+      count("holiday_types"),
+      count("blogs"),
+      count("enquiries"),
+      count("enquiries", (q) => q.eq("status", "new"))
+    ]);
 
   const tiles = [
-    { href: "/admin/destinations", label: "Destinations", value: counts.destinations },
-    { href: "/admin/packages", label: "Holiday Packages", value: counts.packages },
-    { href: "/admin/holiday-types", label: "Holiday Types", value: counts.holidayTypes },
-    { href: "/admin/blogs", label: "Journal Posts", value: counts.blogs },
-    { href: "/admin/enquiries", label: "Total Enquiries", value: counts.enquiries },
+    { href: "/admin/destinations", label: "Destinations", value: destinations },
+    { href: "/admin/packages", label: "Holiday Packages", value: packages },
+    { href: "/admin/holiday-types", label: "Holiday Types", value: holidayTypes },
+    { href: "/admin/blogs", label: "Journal Posts", value: blogs },
+    { href: "/admin/enquiries", label: "Total Enquiries", value: enquiries },
     { href: "/admin/enquiries", label: "New Enquiries", value: newEnquiries, accent: true }
   ];
 
@@ -59,9 +66,9 @@ export default function AdminDashboard() {
         <div className="bg-white rounded-2xl p-6 border border-brand-ink/5">
           <h3 className="font-serif text-xl text-brand-ink">CMS notes</h3>
           <p className="mt-2 text-sm text-brand-ink/70 leading-relaxed">
-            Content is stored as JSON files under <code>/data</code>. Uploaded images are saved to{" "}
-            <code>/public/uploads</code>. Restart the dev server if you change the admin password
-            in <code>data/admin.json</code>.
+            Content is stored in Supabase Postgres. Uploaded images go to the
+            <code> uploads </code>storage bucket. Enquiries arrive in your
+            inbox via Resend and are kept here for follow-up.
           </p>
         </div>
       </div>

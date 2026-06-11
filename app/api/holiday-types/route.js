@@ -1,3 +1,4 @@
 import { listHandler, createHandler } from "@/lib/crud";
-export const GET = listHandler("holidayTypes");
-export const POST = createHandler("holidayTypes");
+export const dynamic = "force-dynamic";
+export const GET = listHandler("holiday_types");
+export const POST = createHandler("holiday_types");

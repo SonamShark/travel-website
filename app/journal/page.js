@@ -2,12 +2,13 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import BlogCard from "@/components/BlogCard";
-import { readCollection } from "@/lib/db";
+import { getBlogs } from "@/lib/content";
 
 export const metadata = { title: "Journal — Thubten Travels" };
+export const revalidate = 60;
 
-export default function JournalPage() {
-  const posts = readCollection("blogs");
+export default async function JournalPage() {
+  const posts = await getBlogs();
   return (
     <>
       <Navbar />
@@ -16,7 +17,6 @@ export default function JournalPage() {
           eyebrow="Stories & notes"
           title="Journal"
           subtitle="Field notes, travel stories and the small things we've learnt from many years of guiding in Bhutan."
-          //image="https://images.unsplash.com/photo-1545239351-cefa43af60f3?auto=format&fit=crop&w=1920&q=80"
           image="https://images.unsplash.com/photo-1605904583059-7880dad25595?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         />
         <section className="section">

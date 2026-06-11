@@ -6,12 +6,21 @@ import DestinationCard from "@/components/DestinationCard";
 import PackageCard from "@/components/PackageCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import CtaBanner from "@/components/CtaBanner";
-import { readObject, readCollection } from "@/lib/db";
+import { getSiteSettings } from "@/lib/site";
+import { getDestinations, getPackages } from "@/lib/content";
 
-export default function HomePage() {
-  const site = readObject("site");
-  const destinations = readCollection("destinations").slice(0, 4);
-  const packages = readCollection("packages").slice(0, 3);
+// ISR — rebuild at most once a minute, plus on admin save (we don't wire
+// revalidatePath here; a minute is fine for a content site of this size).
+export const revalidate = 60;
+
+export default async function HomePage() {
+  const [site, allDestinations, allPackages] = await Promise.all([
+    getSiteSettings(),
+    getDestinations(),
+    getPackages()
+  ]);
+  const destinations = allDestinations.slice(0, 4);
+  const packages = allPackages.slice(0, 3);
 
   return (
     <>
@@ -23,7 +32,6 @@ export default function HomePage() {
           image={site.hero?.image}
         />
 
-        {/* Featured destinations */}
         <section className="section">
           <div className="wrap">
             <SectionTitle
@@ -39,7 +47,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Featured packages */}
         <section className="section bg-brand-beige">
           <div className="wrap">
             <SectionTitle
@@ -55,7 +62,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Why choose us */}
         <section className="section">
           <div className="wrap">
             <SectionTitle eyebrow="Why travel with us" title="Quietly, carefully, locally" />
@@ -73,7 +79,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Testimonials */}
         <section className="section bg-brand-ink text-white">
           <div className="wrap">
             <div className="max-w-2xl mx-auto text-center mb-12">

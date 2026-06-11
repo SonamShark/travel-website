@@ -3,14 +3,12 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
-import { readCollection } from "@/lib/db";
+import { getPackageBySlug } from "@/lib/content";
 
-export function generateStaticParams() {
-  return readCollection("packages").map((p) => ({ slug: p.slug }));
-}
+export const revalidate = 60;
 
-export default function PackageDetail({ params }) {
-  const pkg = readCollection("packages").find((p) => p.slug === params.slug);
+export default async function PackageDetail({ params }) {
+  const pkg = await getPackageBySlug(params.slug);
   if (!pkg) notFound();
 
   return (
@@ -27,7 +25,6 @@ export default function PackageDetail({ params }) {
         <section className="section">
           <div className="wrap grid lg:grid-cols-3 gap-10">
             <div className="lg:col-span-2">
-              {/* Quick facts */}
               <div className="flex flex-wrap gap-3 mb-10">
                 <span className="px-4 py-2 rounded-full bg-brand-beige text-sm text-brand-ink">
                   {pkg.duration}
@@ -40,7 +37,6 @@ export default function PackageDetail({ params }) {
                 </span>
               </div>
 
-              {/* Itinerary */}
               <h2 className="font-serif text-3xl text-brand-ink">Itinerary</h2>
               <ol className="mt-6 space-y-5">
                 {(pkg.itinerary || []).map((day, i) => (
@@ -52,7 +48,6 @@ export default function PackageDetail({ params }) {
                 ))}
               </ol>
 
-              {/* Inclusions / Exclusions */}
               <div className="grid md:grid-cols-2 gap-8 mt-12">
                 <div>
                   <h3 className="font-serif text-2xl text-brand-ink">Inclusions</h3>
@@ -77,7 +72,6 @@ export default function PackageDetail({ params }) {
               </div>
             </div>
 
-            {/* Sidebar enquiry CTA */}
             <aside className="bg-brand-beige rounded-2xl p-7 h-fit sticky top-28">
               <p className="eyebrow mb-2">Interested?</p>
               <h3 className="font-serif text-2xl text-brand-ink">Enquire about this journey</h3>

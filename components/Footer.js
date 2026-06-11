@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { readObject } from "@/lib/db";
+import { getSiteSettings } from "@/lib/site";
 
-export default function Footer() {
-  const { contact = {} } = readObject("site");
+export default async function Footer() {
+  const { contact = {} } = await getSiteSettings();
   const social = contact.social || {};
 
   return (

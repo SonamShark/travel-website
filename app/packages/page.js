@@ -3,12 +3,13 @@ import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import PackageCard from "@/components/PackageCard";
 import CtaBanner from "@/components/CtaBanner";
-import { readCollection } from "@/lib/db";
+import { getPackages } from "@/lib/content";
 
 export const metadata = { title: "Holiday Packages — Thubten Travels" };
+export const revalidate = 60;
 
-export default function PackagesPage() {
-  const packages = readCollection("packages");
+export default async function PackagesPage() {
+  const packages = await getPackages();
   return (
     <>
       <Navbar />

@@ -1,8 +1,8 @@
 # Thubten Travels
 
-A clean, modern Bhutan travel-agency website with a simple built-in CMS.
+A Bhutan travel-agency site with a built-in CMS, Supabase backend, and email notifications via Resend.
 
-Built with **Next.js 14 (App Router) + React + Tailwind CSS**. Content is stored in JSON files under `/data` — no database required.
+**Stack:** Next.js 14 (App Router) · React · Tailwind CSS · Supabase Postgres + Storage · Resend.
 
 ---
 
@@ -10,126 +10,127 @@ Built with **Next.js 14 (App Router) + React + Tailwind CSS**. Content is stored
 
 ```bash
 npm install
+cp .env.example .env.local        # fill in real values
 npm run dev
 ```
 
-Open <http://localhost:3000>.
-
-### Admin panel
-
-Open <http://localhost:3000/admin/login>.
-
-- **Username:** `admin`
-- **Password:** `happiness2026`
-
-(Change these in `data/admin.json`.)
+Open <http://localhost:3000>. The admin panel is at <http://localhost:3000/admin/login>.
 
 ---
 
-## Features
+## First-time Supabase setup
 
-### Public site
-- **Home** — hero, featured destinations, featured packages, why-choose-us, testimonials, CTA
-- **Destinations** index + individual destination pages
-- **Holiday Types** (Cultural, Adventure, Spiritual, Festival, Wellness, Luxury)
-- **Packages** index + detail pages (itinerary, inclusions/exclusions)
-- **Travel Guide** — visa & SDF, seasons, festivals, travel tips, FAQ
-- **About** — story, mission/values, team
-- **Journal** index + post pages
-- **Contact** — form, map, social links
-- **Make Enquiry** — full enquiry form
-- Mobile responsive, soft Bhutan-inspired palette (white / gold / green / beige / ink)
+1. **Create a project** at <https://supabase.com>.
+2. **Run the schema** in the Supabase dashboard → SQL Editor → paste [supabase/schema.sql](supabase/schema.sql) → Run. This creates every table, RLS policy, and the `uploads` storage bucket.
+3. **Get keys** from Project → Settings → API:
+   - `Project URL` → `NEXT_PUBLIC_SUPABASE_URL`
+   - `anon public key` → `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+   - `service_role secret` → `SUPABASE_SERVICE_ROLE_KEY` (server-only)
+4. **Seed the database** with the sample content from `/seed`:
+   ```bash
+   npm run seed
+   ```
+   Re-runnable — uses upsert on `slug`.
 
-### Admin / CMS
-- Secure login (cookie session)
-- Dashboard with content counts
-- Manage **Destinations**, **Holiday Packages**, **Holiday Types**, **Journal Posts**
-- Upload images directly to `/public/uploads`
-- Edit homepage hero (title, subtitle, image)
-- Edit contact info and social links
-- View submitted **Enquiries**, mark as New / In Progress / Completed
-- Delete or update any record from the dashboard
+## First-time Resend setup
+
+1. Create an account at <https://resend.com> and generate an API key → `RESEND_API_KEY`.
+2. Verify a sender domain (or use `onboarding@resend.dev` while developing) → `FROM_EMAIL`.
+3. Set `ADMIN_EMAIL` to wherever you want enquiry notifications delivered.
 
 ---
 
-## Project structure
+## Architecture
+
+```
+Browser ─► Vercel (Next.js)
+            │
+            ├─► Supabase Postgres  (content + enquiries)
+            ├─► Supabase Storage   (image uploads — public bucket: uploads)
+            └─► Resend             (admin notify + customer ack on enquiry)
+```
+
+- Public pages read via the **anon key** (RLS allows public SELECT on content tables only).
+- Admin API routes write via the **service_role key** (server-only).
+- The public enquiry endpoint is open but rate-limited by IP (5 / hour) via a count query against the `enquiries` table.
+- Cookie-based admin session; credentials come from env vars in production, with `data/admin.json` as a local-dev fallback.
+
+### Folder map
 
 ```
 app/
   page.js                  # Home
-  destinations/            # public destination pages
-  holiday-types/
-  packages/
-  travel-guide/
-  about/
-  journal/
-  contact/
-  enquiry/
-  admin/
-    login/                 # admin login
-    page.js                # admin dashboard
-    destinations/          # CMS pages
-    packages/
-    holiday-types/
-    blogs/
-    enquiries/
-    settings/
+  destinations/, packages/, holiday-types/, travel-guide/, journal/, about/, contact/, enquiry/
+  admin/                   # Dashboard + CMS (auth-gated)
   api/
-    auth/{login,logout}/   # session endpoints
-    destinations/, packages/, holiday-types/, blogs/   # CRUD
-    enquiries/             # public POST + admin GET/PUT/DELETE
-    site/                  # homepage hero + contact settings
-    upload/                # image upload endpoint
+    auth/{login,logout}/
+    destinations/, packages/, holiday-types/, blogs/  # CRUD via Supabase
+    enquiries/             # public POST → DB + email; admin GET/PUT/DELETE
+    site/                  # site settings KV (hero / contact / why-choose-us / testimonials)
+    upload/                # multipart → Supabase Storage
 components/
   Navbar, Footer, Hero, PageHeader, CtaBanner,
   DestinationCard, PackageCard, BlogCard, HolidayTypeCard,
   TestimonialCard, EnquiryForm, ImageUploader, AdminShell
-data/
-  site.json                # hero + contact + testimonials
-  destinations.json
-  holidayTypes.json
-  packages.json
-  blogs.json
-  enquiries.json
-  admin.json               # admin credentials
 lib/
-  db.js                    # JSON read/write helpers
-  auth.js                  # session helpers
-  adminGuard.js            # requireAuth() for admin pages
-  crud.js                  # shared CRUD route handlers
-public/
-  uploads/                 # uploaded images live here
+  supabase/server.js       # service_role client (server-only)
+  supabase/public.js       # anon client (safe everywhere)
+  content.js               # public-page read helpers
+  site.js                  # site_settings read helper
+  crud.js                  # admin CRUD route factory
+  email/resend.js          # Resend client + send helpers
+  email/templates.js       # HTML email templates
+  rateLimit.js             # IP-based limiter via Postgres
+  auth.js, adminGuard.js   # cookie session + admin gate
+  db.js                    # legacy slugify + dev-only admin file fallback
+seed/                      # sample content used by `npm run seed`
+supabase/
+  schema.sql               # paste into Supabase SQL Editor
+scripts/
+  seed.mjs                 # one-shot seed runner
 ```
 
 ---
 
-## How content is stored
+## Environment variables
 
-- All content lives as plain JSON in `/data`. You can edit it by hand, or use the admin panel.
-- Image uploads are saved to `public/uploads/` and referenced by URL (`/uploads/your-image.jpg`).
-- Sample image URLs in the seed data use Unsplash. Replace them with your own (or upload via admin) before going live.
+See [.env.example](.env.example) for the full list. The non-obvious ones:
 
----
-
-## Customising
-
-- **Brand colours and fonts:** `tailwind.config.js` and `app/globals.css`
-- **Navigation links:** `components/Navbar.js`
-- **Hero / homepage content:** Admin → Site Settings (or edit `data/site.json` directly)
-- **Why-choose-us & testimonials:** `data/site.json`
+| Variable | Where | Notes |
+|---|---|---|
+| `SUPABASE_SERVICE_ROLE_KEY` | server only | Bypasses RLS — keep secret. |
+| `RESEND_API_KEY` | server only | If unset, email sends are skipped and logged. |
+| `FROM_EMAIL` | server only | Must be a verified sender in Resend. |
+| `ADMIN_EMAIL` | server only | Inbox that receives new-enquiry notifications. |
+| `SESSION_SECRET` | server only | Random string used as the session cookie value. |
 
 ---
 
-## Build for production
+## Deploying to Vercel
 
-```bash
-npm run build
-npm run start
-```
+1. Push to GitHub (the `data/admin.json` and `.env*` are gitignored).
+2. Import the repo at <https://vercel.com/new>.
+3. Add every variable from `.env.example` under **Environment Variables**.
+4. Deploy.
+
+Image uploads, enquiry persistence, and admin edits all work in production because there's no longer any local-filesystem write path — everything goes to Supabase.
 
 ---
 
-## Notes
+## Local development tips
 
-- Authentication is a simple cookie session, suitable for a single admin. For a public production deployment, replace it with a proper auth provider and hash the password.
-- File-based JSON storage works perfectly on a single server. If you deploy to a serverless platform with a read-only filesystem (e.g. Vercel), move content to a database (Postgres, SQLite via Turso, Supabase, etc.) — the `lib/db.js` interface should make that easy.
+- `npm run dev` — start the site on port 3000.
+- `npm run seed` — refresh sample content into Supabase.
+- Edit content via `/admin` (writes go to Supabase), or directly via Supabase's table editor.
+- Resend has a test sender (`onboarding@resend.dev`) — use it to develop emails without verifying a domain.
+
+---
+
+## Security notes
+
+- Admin credentials live in env vars; no plaintext passwords in git.
+- `SUPABASE_SERVICE_ROLE_KEY` is only ever used in server-side files (`lib/supabase/server.js`, API routes).
+- RLS makes the anon key safe for browsers — public callers can read content and submit enquiries, nothing else.
+- The session cookie is `httpOnly`, `SameSite=Lax`, and `Secure` in production.
+- Enquiry submissions are rate-limited by IP (5/hour) and the IP + user-agent are stored alongside each row for abuse tracing.
+- Email templates always HTML-escape user-supplied text.
